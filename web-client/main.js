@@ -27,16 +27,20 @@ app.get('/resultados', (req, res) => {
     
     var apip = api + req.query.s;
 
-    got(apip, { json: true }).then(resposta => {
-       // console.log(resposta.body);
-
-        res.render('resultados', {
-            titulo: titulo,
-            resultados: resposta.body,
-            params: req.query.s
-        });
-
-      }).catch(error => {
-        console.log(error);
-      });
+    if(req.query.s.length !== 0) {
+        got(apip, { json: true }).then(resposta => {
+            // console.log(resposta.body);
+     
+             res.render('resultados', {
+                 titulo: titulo,
+                 resultados: resposta.body,
+                 params: req.query.s
+             });
+     
+           }).catch(error => {
+             console.log(error);
+           });
+    } else {
+        res.redirect('/');
+    }
 });

@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= titulo
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="css/magic.min.css")
+  body
+    #titulo
+     a(href="/")
+      h1 Celia
+     form(action="/resultados", method="get")
+      input(type="text", name="s", value=params)
+    #resultados
+     #cima
+       h5 Resultados para
+       span= params
+     #wr-res
+      -for(var i = 0; i < resultados.items.length; i++)
+       .resultado
+         a(href=resultados.items[i].link)
+          h2= resultados.items[i].title
+         h3= resultados.items[i].displayLink
+         p= resultados.items[i].snippet

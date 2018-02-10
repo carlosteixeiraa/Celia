@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= titulo
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="css/magic.min.css")
+  body(class="azul")
+    #wrapper
+     h1 celia
+    #barra
+     form(action="/resultados", autocomplete="off", method="get")
+      input(type="text", name="s", placeholder="Who loves cats?")
+      button(type="submit") 
+       img(src="media/lupa.png")
+    script(src="js/jquery.min.js")
+    script(src="js/main.js")
