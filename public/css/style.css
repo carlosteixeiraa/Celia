@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito';
+    background: #00ACC1;
+}
+
+#wrapper {
+    height: 50vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#wrapper h1 {
+    text-align: center;
+    font-size: 8em;
+    color: snow;
+}
+
+#barra {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#barra form {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#barra form input {
+    border: none;
+    height: 40px;
+    width: 28em;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: rgb(128, 126, 126);
+    padding-left: 10px;
+}
+
+#barra form button {
+    font-family: 'Nunito';
+    background: rgb(22, 87, 209);
+    border-top-right-radius: 4px;
+    color: white;
+    border-bottom-right-radius: 4px;
+    border: none;
+    height: 40px;
+    width: 3em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#resultados {
+    background: white;
+    padding-right: 2.5em;
+    padding-top: 2em;
+    padding-left: 2.5em;
+    height: 2000px;
+}
+
+#titulo {
+    display: flex;
+    padding-left: 1em;
+    color: white;
+    align-content: center;
+    align-items: center;
+    height: 10vh
+}
+
+.resultado {
+    margin-top: 2em;
+    padding-bottom: 2em;
+    border-bottom: 0.5px solid rgb(189, 185, 185);
+    width: 45vw;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+span {
+    font-size: 20px;
+}
+
+#cima {
+    height: 10vh;
+    padding-top: 1em;
+    padding-left: 1.5em;
+    padding-bottom: 1em;
+    border-radius: 2px;
+    background: rgb(235, 229, 229);
+    margin-bottom: 2em;
+}
+
+.resultado h2 {
+    font-size: 18px;
+}
+
+.resultado h3 {
+    color: rgb(44, 189, 44);
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.resultado p {
+    font-size: 14px;
+}
+
+#titulo form input {
+    border: none;
+    height: 30px;
+    position: relative;
+    left: 35em;
+    width: 15em;
+    border-radius: 4px;
+    color: rgb(128, 126, 126);
+    padding-left: 10px;
+}
