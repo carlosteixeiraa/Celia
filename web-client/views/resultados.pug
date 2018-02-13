@@ -19,9 +19,10 @@ html
        h5 Resultados para
        span= params
      #wr-res
-      -for(var i = 0; i < resultados.items.length; i++)
-       .resultado
-         a(href=resultados.items[i].link)
-          h2= resultados.items[i].title
-         h3= resultados.items[i].displayLink
-         p= resultados.items[i].snippet
+      -for(var i = 0; i < resultados.length; i++)
+       - if(resultados[i].href !== null)
+          .resultado
+           a(href=resultados[i].href)
+            h2= resultados[i].title
+           h3= resultados[i].link
+           p= resultados[i].description

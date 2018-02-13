@@ -1,7 +1,3 @@
-// AIzaSyAZkBF9MCouccU4irPf4ymuNnMwqlXmn
-var cxkey = '001132580745589424302:jbscnf14_dw';
-var api = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyA0dRdEYJaFVpkRj4ZxBiWUOMZ50yfY380&cx=' + cxkey + '&q='
-
 var express = require('express'),
     app = express(),
     porta = 3000,
@@ -25,7 +21,7 @@ app.get('/', (req, res) => {
 app.get('/resultados', (req, res) => {
     let titulo = 'Celia - Resultados para ' + req.query.s;
     
-    var apip = api + req.query.s;
+    var apip = "http://localhost:3020/fsgey1r3i4?pedido=" + req.query.s + "&resultados=100";
 
     if(req.query.s.length !== 0) {
         got(apip, { json: true }).then(resposta => {
