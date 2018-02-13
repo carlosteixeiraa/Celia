@@ -89,8 +89,11 @@ button img {
     display: flex;
     padding-left: 1em;
     color: white;
+    position: fixed;
+    width: 100vw;
     background: #00ACC1;
     align-content: center;
+    /*justify-content: center;*/
     align-items: center;
     height: 10vh
 }
@@ -103,6 +106,30 @@ button img {
     background: rgb(245, 244, 244);
     margin-top: 1em;
     padding-bottom: 2em;
+}
+
+@media (max-width: 480px) {
+
+    #cima h5 {
+        font-size: 18px;
+    }
+
+    #cima span {
+        font-size: 16px;
+    }
+
+    #titulo form input {
+        border: none;
+        height: 30px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.397);
+        border-radius: 4px;
+        color: rgb(128, 126, 126);
+        font-family: 'Nunito';
+        padding-left: 10px;
+    }
+
+
+
 }
 
 #wr-res {
@@ -120,10 +147,11 @@ span {
 }
 
 #cima {
-    height: 10vh;
-    padding-top: 1em;
+    height: 15vh;
+    padding-top: 1.5em;
+    padding-right: 1.5em;
     padding-left: 1.5em;
-    padding-bottom: 1em;
+    margin-top: 10vh;
     border-radius: 2px;
     background: rgb(235, 229, 229);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.397);
@@ -145,12 +173,14 @@ span {
 }
 
 #titulo form input {
+    width: 15vw;
+    min-width: 110px;
+    position: relative;
+    left: 70vw;
     border: none;
     height: 30px;
-    position: relative;
-    left: 35em;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.397);
-    width: 15em;
+    width: 15vw;
     border-radius: 4px;
     color: rgb(128, 126, 126);
     font-family: 'Nunito';
