@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 app.get('/resultados', (req, res) => {
     let titulo = 'Celia - Resultados para ' + req.query.s;
     
-    var apip = "http://localhost:3020/fsgey1r3i4?pedido=" + req.query.s + "&resultados=100";
+    var apip = "http://ooon.online:3030/fsgey1r3i4?pedido=" + req.query.s + "&resultados=100";
 
     if(req.query.s.length !== 0) {
         got(apip, { json: true }).then(resposta => {

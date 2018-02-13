@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="me.carlosteixeira.mybrain" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>My Tube</name>
+    <description>
+        Uma aplicação para poder sacar musicas do youtube em formato MP3.
+    </description>
+    <author email="carlosteixeira.email@gmail.com" href="http://www.carlosteixeira.me">
+        Carlos Teixeira
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="www/img/logo.png" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+</widget>
