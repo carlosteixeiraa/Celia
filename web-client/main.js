@@ -19,15 +19,46 @@ app.get('/', (req, res) => {
 })
 
 app.get('/resultados', (req, res) => {
-    let titulo = 'Celia - Resultados para ' + req.query.s;
+    let titulo = 'celia - Resultados para ' + req.query.s;
     
-    var apip = "http://ooon.online:3030/fsgey1r3i4?pedido=" + req.query.s + "&resultados=100";
+    var apip = "http://localhost:3030/fsgey1r3i4?pedido=" + req.query.s + "&resultados=100";
+    var apiprev = "http://localhost:3030/imagens/fsgey1r3i4?pedido=" + req.query.s + "&resultados=9"
+
+    
+    if(req.query.s.length !== 0) {
+        got(apip, { json: true }).then(resposta => {
+     
+            got(apiprev, { json: true }).then(prev => {
+         
+                 res.render('resultados', {
+                     titulo: titulo,
+                     resultados: resposta.body,
+                     preview : prev.body,
+                     params: req.query.s
+                 });
+         
+               }).catch(error => {
+                 console.log(error);
+               });
+     
+           }).catch(error => {
+             console.log(error);
+           });
+    } else {
+        res.redirect('/');
+    }
+});
+
+app.get('/imagens', (req, res) => {
+    let titulo = 'celia - Imagens - Resultados para ' + req.query.s;
+    
+    var apip = "http://localhost:3030/imagens/fsgey1r3i4?pedido=" + req.query.s + "&resultados=6";
 
     if(req.query.s.length !== 0) {
         got(apip, { json: true }).then(resposta => {
             // console.log(resposta.body);
      
-             res.render('resultados', {
+             res.render('imagens', {
                  titulo: titulo,
                  resultados: resposta.body,
                  params: req.query.s

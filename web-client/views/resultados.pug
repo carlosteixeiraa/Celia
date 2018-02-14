@@ -18,11 +18,19 @@ html
      #cima
        h5 Resultados para
        span= params
-     #wr-res
-      -for(var i = 0; i < resultados.length; i++)
-       - if(resultados[i].href !== null)
-          .resultado
-           a(href=resultados[i].href)
-            h2= resultados[i].title
-           h3= resultados[i].link
-           p= resultados[i].description
+     #grid
+      #wr-res
+       -for(var i = 0; i < resultados.length; i++)
+        - if(resultados[i].href !== null)
+           .resultado
+            a(href=resultados[i].href)
+             h2= resultados[i].title
+            h3= resultados[i].link
+            p= resultados[i].description
+      aside
+       h1 Prefere procurar Imagens?
+       br
+       a(href="#", onclick="return false;", id="irimg")
+        div(id="prev")
+         - for(var i = 0; i < preview.length; i++)
+            img(src=preview[i].thumb)

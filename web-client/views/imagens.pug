@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= titulo
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="css/magic.min.css")
+  body
+    #titulo
+     a(href="/")
+      h1 celia
+     form(action="/imagens", method="get")
+      input(type="text", name="s", value=params)
+    #resultados
+     #cima
+       h5 Imagens para
+       span= params
+     #wr-imagens
+      -for(var i = 0; i < resultados.length; i++)
+        #res-img
+          a(href="#" onclick="return false;" class="contador img-btn" + i)
+           span(class="imgc")= resultados[i].url
+           span(class="imgw")= resultados[i].width
+           span(class="imgh")= resultados[i].height
+           img(src=resultados[i].thumb)
+          #res-barra
+            span(id="direita")=resultados[i].size
+    #mostrar
+      #esq
+       img(id="tam", src="#")
+      #dir
+       img(src="media/cruz.svg", id="cruz")
+       a(href="#") Ver imagem original
+    script(src="js/jquery.min.js")
+    script(src="js/imagens.js")
