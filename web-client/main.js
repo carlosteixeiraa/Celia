@@ -52,7 +52,7 @@ app.get('/resultados', (req, res) => {
 app.get('/imagens', (req, res) => {
     let titulo = 'celia - Imagens - Resultados para ' + req.query.s;
     
-    var apip = "http://localhost:3030/imagens/fsgey1r3i4?pedido=" + req.query.s + "&resultados=6";
+    var apip = "http://localhost:3030/imagens/fsgey1r3i4?pedido=" + req.query.s + "&resultados=100";
 
     if(req.query.s.length !== 0) {
         got(apip, { json: true }).then(resposta => {

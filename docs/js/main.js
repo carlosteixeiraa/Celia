@@ -3,6 +3,10 @@ $(document ).ready(() => {
     $('#imagem img').addClass('magictime slideDownReturn');
 });
   
+if (window.location.protocol !== 'https:') {
+    window.location = 'https://' + window.location.hostname + window.location.pathname + window.location.hash;
+}
+
 var app = document.getElementById('anim');
 
 var tw = new Typewriter(app, {
