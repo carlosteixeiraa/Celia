@@ -51,7 +51,8 @@ var url = queryjs['s'];
 
 $("#irimg").click(() => {
 
-  window.location.href = "/imagens?s=" + url; 
+  var linkimg = "https://localhost:3000/imagens?s=" + url;
+  window.open(linkimg, '_self')
  
 });
  
