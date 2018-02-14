@@ -30,7 +30,7 @@ html
       aside
        h1 Prefere procurar Imagens?
        br
-       a(href="#", onclick="return false;", id="irimg")
+       a(href="/imagens?s=" + params, id="irimg")
         div(id="prev")
          - for(var i = 0; i < preview.length; i++)
             img(src=preview[i].thumb)
